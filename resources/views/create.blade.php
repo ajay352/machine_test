@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div class='mt-10'>
+        <div class="w-1/12 font-bold mx-auto">
+            <h1 class="text-2xl ">Used Cars</h1>
+        </div>
     <form method="post" action="{{route('view')}}" enctype="multipart/form-data" class="w-full max-w-lg mx-auto">
         @csrf
         <div class="mb-4">
@@ -38,6 +42,7 @@
             </button>
         </div>
     </form>
+    </div>
     <script>
         let dateDropdown = document.getElementById('date-dropdown');
         let currentYear = new Date().getFullYear();

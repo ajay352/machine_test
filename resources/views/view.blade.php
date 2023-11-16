@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container mx-auto">
-    <h1 class="text-2xl font-semibold mb-4">Used Cars</h1>
+    <h1 class="text-2xl text-center mt-4 font-semibold mb-4">Admin Panel</h1>
     <table id="myTable" class="min-w-full divide-y divide-gray-200">
         <thead>
             <tr>
