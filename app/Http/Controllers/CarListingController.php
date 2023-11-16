@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CarListing;
 use App\Models\Registration;
+use Illuminate\Support\Facades\Auth;
 class CarListingController extends Controller
 {
     public function create(){
@@ -80,6 +81,8 @@ class CarListingController extends Controller
             'email' => $request->input('email'),
             'password'=>$request->input('password'),
         ]);
+        $username=$request->input('name');
+        session(['username' => $username]);
         return redirect('/customdashboard');
     }
     public function login_verification(Request $request){
@@ -98,5 +101,10 @@ class CarListingController extends Controller
     public function customdashboard(){
         $cards=CarListing::all();
         return view('customdash',compact('cards'));
+    }
+    public function logout(){
+        Auth::logout(); 
+        session()->flush();
+        return redirect('/dashboard');
     }
 }

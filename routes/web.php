@@ -27,6 +27,8 @@ Route::get('/register', [CarListingController::class, 'register'])->name('regist
 Route::post('/register_verification',[CarListingController::class,'register_verification'])->name('register_verification');
 Route::post('/login_verification',[CarListingController::class,'login_verification'])->name('login_verification');
 Route::get('/customdashboard', [CarListingController::class, 'customdashboard'])->name('customdashboard');
+Route::get('/logout', [CarListingController::class, 'logout'])->name('logout');
+
 
 
 

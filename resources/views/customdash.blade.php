@@ -11,9 +11,9 @@
 <body>
     <nav class="bg-blue-500 p-4 flex justify-between items-center">
         <div class="text-white font-bold text-lg">ASN Cars</div>
-        <p>Welcome, {{ session('name') }}!</p>
+        <p>Welcome, {{ session('name') }} {{ session('username') }}!</p>
         <div class="flex ">
-            <a href="{{ route('login') }}" class="text-white">Logout</a>
+            <a href="{{ route('logout') }}" class="text-white">Logout</a>
         </div>
     </nav>
     <div class="container w-8/12 mx-auto mt-10 flex flex-wrap">
